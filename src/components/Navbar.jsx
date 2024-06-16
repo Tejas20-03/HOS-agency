@@ -38,7 +38,7 @@ const Navbar = () => {
   };
   return (
     <nav className="flex bg-white justify-between p-4 items-center">
-      <a href="/" className="flex gap-2 items-center">
+      <a href="/" className="flex gap-2 items-center flex-1">
         <img
           className="flex object-cover"
           src={logo}
@@ -63,11 +63,14 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <button className="hidden md:flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
-        <FontAwesomeIcon icon={faDiagramProject} />
-        <span>Explore Projects</span>
-        <FontAwesomeIcon icon={faArrowRight} />
-      </button>
+      <div className="hidden lg:flex flex-1 justify-end">
+        <button className="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+          <FontAwesomeIcon icon={faDiagramProject} />
+          <span>Explore Projects</span>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
+      </div>
+
       <button className="p-2 md:hidden" onClick={handleMenu}>
         <FontAwesomeIcon className="text-gray-600" icon={faBars} />
       </button>
